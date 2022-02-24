@@ -4,7 +4,8 @@
   "description": "package json for heroku",
   "main": "index.js",
   "scripts": {
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "start": "react-scripts start",
   },
   "author": "afcplush",
   "license": "ISC",
