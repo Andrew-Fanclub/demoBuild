@@ -4,7 +4,7 @@
 // side note need to wait for catherine to finish up frontend so I can connect it
 // also need to see if heroku will allow port-forwarding for mailjet api
 
-const Mailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 /*
 const transport = {
     host: 'afcplushies@gmail.com',
