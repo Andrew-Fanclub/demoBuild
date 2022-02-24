@@ -23,12 +23,12 @@ export const email = () => ({
     )
 })
 
-export const mailer = Mailer(
+export const mail = Mailer(
     { transport, defaults },
     { email }
 )
 
-mailer.send('email', {
+mail.send('email', {
     to: 'afcplushies@gmail.com'
 })
 
