@@ -40,7 +40,7 @@ app.get("/contact", function(req, res){
 })*/
 
 // Mailer section for contact page
-app.post('/process?contactUs', function(req, res){
+/*app.post('/process?contactUs', function(req, res){
     let transporter = nodemailer.createTransport({
         host: "gmail",
         port: 2525,
@@ -65,7 +65,7 @@ app.post('/process?contactUs', function(req, res){
 
     res.writeHead(301, { Location: 'index.html' })
     res.end();
-})
+})*/
 
 // Start listening on port 8080
 /*app.listen(app.get('PORT'), function(){
