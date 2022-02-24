@@ -17,11 +17,11 @@ app.use(express.urlencoded);
 app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend/build")));
 
 // Set backend port
-app.set('PORT', process.env.PORT || 8080);
+app.set('PORT', process.env.PORT);
 
 // Render webpages
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + 'build/index.html'));    
+    res.sendFile(path.join(__dirname + '~/Website/Website/Website/frontend/build/index.html'));    
 });
 
 /*app.get("/", function(req, res, err){
