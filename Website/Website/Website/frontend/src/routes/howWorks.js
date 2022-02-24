@@ -66,3 +66,4 @@ function HowWorks() {
 }
 
 export default HowWorks;
+module.exports = HowWorks;
