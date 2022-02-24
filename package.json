@@ -14,5 +14,5 @@
     "yarn": "^1.22.17"
   },
     "private": true,
-    "workspaces": ["frontend", "backend"]
+    "workspaces": ["frontend", "backend", "packages/*"]
 }
