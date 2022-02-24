@@ -4,7 +4,7 @@
 // side note need to wait for catherine to finish up frontend so I can connect it
 // also need to see if heroku will allow port-forwarding for mailjet api
 
-const Mailer = require('nodemailer');
+/*const Mailer = require('nodemailer');
 
 const transport = {
     host: 'afcplushies@gmail.com',
@@ -30,6 +30,31 @@ export const mail = Mailer(
 
 mail.send('email', {
     to: 'afcplushies@gmail.com'
+})*/
+
+let transporter = nodemailer.createTransport({
+    host: "gmail",
+    port: 8080,
+    secure: true,
+    auth: {
+        user: 'marlonportfolio@gmail.com',
+        pass: '',
+    }
 })
 
-module.exports = { Mailer };
+let mailOptions = {
+    to: 'marlonportfolio@gmail.com',
+    subject: req.body.name + req.body.email,
+    text: req.body.message
+}
+transporter.sendMail(mailOptions, (error, info) => {
+    if(error){
+        return console.log(error);
+    }
+    console.log('Message %s sent: %s', info.messageId, info.response);
+})
+
+res.writeHead(301, { Location: 'index.html' })
+res.end();
+
+module.exports = { mailer };
