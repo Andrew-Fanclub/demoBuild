@@ -5,6 +5,7 @@
 // also need to see if heroku will allow port-forwarding for mailjet api
 
 var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
 /*
 const transport = {
     host: 'afcplushies@gmail.com',
