@@ -72,3 +72,4 @@ function WhoWe() {
 }
 
 export default WhoWe;
+module.exports = WhoWe;
