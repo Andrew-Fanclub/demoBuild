@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded);
 
 // Middleware
-app.use(express.static("~/Website/Website/Website/frontend/src"));
+app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend/src")));
 
 // Set backend port
 app.set('PORT', process.env.PORT || 8080);
