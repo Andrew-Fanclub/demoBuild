@@ -19,26 +19,26 @@ app.use(express.urlencoded);
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-app.use(path.join(__dirname, '~/Website/Website/Website/frontend/build'));
+app.use(path.join(__dirname, '~/Website/Website/Website/frontend/src'));
 
 app.get("/", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'build', 'main'));
+    res.sendFile(path.join(__dirname, 'src', 'main'));
 })
 
 app.get("/howitWorks", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'build', './routes/howitWorks'));
+    res.sendFile(path.join(__dirname, 'src', './routes/howitWorks'));
 })
 
 app.get("/aboutus", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'build', './routes/whoweAre'));
+    res.sendFile(path.join(__dirname, 'src', './routes/whoweAre'));
 })
 
 app.get("/contact", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'build', './routes/contact'));
+    res.sendFile(path.join(__dirname, 'src', './routes/contact'));
 })
 
 // Mailer section for contact page
