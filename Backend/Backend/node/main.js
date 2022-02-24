@@ -7,7 +7,7 @@ var express = require("express");
 var app = express();
 var render = require('./components/render')
 var http = require('http');
-const Mailer = require('./components/mailer');
+//const Mailer = require('./components/mailer');
 var bodyParser = require('body-parser');
 
 // Body Parsing
@@ -42,7 +42,30 @@ app.get("/contact", function(req, res){
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
-    Mailer();
+    let transporter = nodemailer.createTransport({
+        host: "gmail",
+        port: 8080,
+        secure: true,
+        auth: {
+            user: 'afcplushies@gmail.com',
+            pass: 'af2plush!3$',
+        }
+    })
+
+    let mailOptions = {
+        to: 'afcplushies@gmail.com',
+        subject: req.body.name + req.body.email,
+        text: req.body.message
+    }
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+            return console.log(error);
+        }
+            console.log('Message %s sent: %s', info.messageId, info.response);
+        })
+
+    res.writeHead(301, { Location: 'index.html' })
+    res.end();
 })
 
 // Start listening on port 8080
