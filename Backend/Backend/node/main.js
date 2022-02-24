@@ -28,19 +28,19 @@ app.get("/", function(req, res, err){
     if(err){
         console.error(err);    
     }
-    res.render(path.join(__dirname, '/main'));
+    res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/main'));
 })
 
 app.get("/howitWorks", function(req, res){
-    res.render(path.join(__dirname, './routes/howitWorks'));
+    res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/howitWorks'));
 })
 
 app.get("/aboutus", function(req, res){
-    res.render(path.join(__dirname, './routes/whoweAre'));
+    res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/whoweAre'));
 })
 
 app.get("/contact", function(req, res){
-    res.render(path.join(__dirname, './routes/contact'));
+    res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/contact'));
 })
 
 // Mailer section for contact page
