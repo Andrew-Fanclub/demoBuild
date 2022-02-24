@@ -1,0 +1,17 @@
+{
+  "name": "demobuild",
+  "version": "1.0.0",
+  "description": "package json for heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "react-scripts test"
+  },
+  "author": "afcplush",
+  "license": "ISC",
+  "dependencies": {
+    "react-scripts": "^5.0.0",
+    "yarn": "^1.22.17"
+  },
+    "private": true,
+    "workspaces": ["frontend", "backend"]
+}
