@@ -1,0 +1,33 @@
+.bg {
+  background: no-repeat url("../images/header.png");
+  background-color: #181818;
+  background-position: top right;
+  background-size: 90vw 100vh;
+  margin: auto;
+}
+.title {
+  color: #0984e3;
+  text-shadow: 0 1.5px white;
+  font-size: 4rem;
+  text-align: center;
+}
+.midWord {
+  color: #fdcb6e;
+}
+.titleBottomText {
+  color: #0984e3;
+  text-align: center;
+  font-weight: 700;
+}
+.headerContent {
+  width: 100vw;
+  height: 50vh;
+}
+.searchContent {
+  width: 100vw;
+  height: 75vh;
+}
+
+.center {
+  margin: 0 auto;
+}
