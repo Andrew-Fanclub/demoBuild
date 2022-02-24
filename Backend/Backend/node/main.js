@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '~/Website/Website/Website/frontend/build/index.html'));    
 });
 
-/*app.get("/", function(req, res, err){
+app.get("/", function(req, res, err){
     if(err){
         console.error(err);    
     }
@@ -41,13 +41,13 @@ app.get("/aboutus", function(req, res){
 
 app.get("/contact", function(req, res){
     res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/contact'));
-})*/
+})
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
     let transporter = nodemailer.createTransport({
         host: "gmail",
-        port: 2525,
+        port: 'PORT',
         secure: true,
         auth: {
             user: 'afcplushies@gmail.com',
@@ -75,56 +75,3 @@ app.post('/process?contactUs', function(req, res){
 app.listen(app.get('PORT'), function(){
     console.log('Server started on port: ' + app.get('PORT'));
 })
-
-
-// Create the server
-/*const server = http.createServer((req, res) => {
-    app.get("/", function(req, res){
-        console.log("Connected to AFCPlushies home");
-        res.send("/");
-    });
-    
-    app.get("/howitWorks", function(req, res){
-        console.log("Connected to AFCPlushies how it works");
-        res.send("/howitWorks");
-    })
-    
-    app.get("/aboutus", function(req, res){
-        console.log("Connected to AFCPlushies who we are");
-        res.send("/whoweAre");
-    })
-    
-    app.get("/contact", function(req, res){
-        console.log("Connected to AFCPlushies contact us");
-        res.send("/contactUs");
-    })
-})
-
-// Start listening on port 8080
-app.listen(app.get('PORT'), function(){
-    console.log('Server started on port: ' + app.get('PORT'));
-})*/
-
-/* // Render file for each webpageb 
-
-app.get("/", function(req, res){
-    console.log("Connected to AFCPlushies home");
-    res.send("/");
-});
-
-app.get("/howitWorks", function(req, res){
-    console.log("Connected to AFCPlushies how it works");
-    res.send("/howitWorks");
-})
-
-app.get("/whoweAre", function(req, res){
-    console.log("Connected to AFCPlushies who we are");
-    res.send("/whoweAre");
-})
-
-app.get("/contactUs", function(req, res){
-    console.log("Connected to AFCPlushies contact us");
-    res.send("/contactUs");
-})
-
-module.exports = router; */
