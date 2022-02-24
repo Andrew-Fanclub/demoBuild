@@ -15,6 +15,9 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded);
 
+// Middleware
+app.use(express.static("~/Website/Website/Website/frontend/src"));
+
 // Set backend port
 app.set('PORT', process.env.PORT || 8080);
 
