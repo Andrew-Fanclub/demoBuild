@@ -24,8 +24,10 @@ app.set('PORT', process.env.PORT || 8080);
 // Render webpages
 //app.use(path.join(__dirname, '~/Website/Website/Website/frontend/src'));
 
-app.get("/", function(req, res){
-    console.log();
+app.get("/", function(req, res, err){
+    if(err){
+        console.log(err);    
+    }
     res.sendFile(path.join(__dirname, '/main'));
 })
 
