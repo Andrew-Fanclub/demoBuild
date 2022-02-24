@@ -18,7 +18,7 @@ app.use(express.urlencoded);
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-app.use(path.join(__dirname, '../../Website/Website/frontend/build'));
+app.use(path.join(__dirname, '~/Website/Website/Website/frontend/build'));
 
 app.get("/", function(req, res){
     console.log();
