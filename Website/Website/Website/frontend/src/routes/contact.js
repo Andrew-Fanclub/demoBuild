@@ -40,3 +40,4 @@ function Contact() {
 }
 
 export default Contact;
+module.exports = Contact;
