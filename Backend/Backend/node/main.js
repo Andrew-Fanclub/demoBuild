@@ -26,7 +26,7 @@ app.set('PORT', process.env.PORT || 8080);
 
 app.get("/", function(req, res, err){
     if(err){
-        console.log(err);    
+        console.error(err);    
     }
     res.sendFile(path.join(__dirname, '/main'));
 })
