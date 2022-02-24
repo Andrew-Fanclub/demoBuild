@@ -23,12 +23,12 @@ function WhoWe() {
                     <h3 className="subTitle">Our Team</h3>
                     <section className="ms-5">
                         <Row className="mb-3">
-                            <Col><div className="square"><img className='team' src= {mj} placeholder='mj' /></div></Col>
+                            <Col><div className="square"><img className='team' src={mj} alt='mj' /></div></Col>
                             <Col className="me-5">
                                 <h5 className='teamTextBold'>Marlon Burog</h5>
                                 <p className='teamText'>1st year Software Engineering major</p>
                             </Col>
-                            <Col><div className="square"><img className='team' src= {catherine} placeholder='catherine' /></div></Col>
+                            <Col><div className="square"><img className='team' src={catherine} alt='catherine' /></div></Col>
                             <Col className="me-5">
                                 <h5 className='teamTextBold'>Catherine Nguyen</h5>
                                 <p className='teamText'>3rd Year (Graduating Senior) Computer Science major</p>
