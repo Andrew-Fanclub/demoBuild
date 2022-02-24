@@ -7,7 +7,7 @@ var express = require("express");
 var app = express();
 var render = require('./components/render')
 var http = require('http');
-import Mailer from './components/mailer';
+const Mailer = require('./components/mailer');
 
 // Set backend port
 app.set('PORT', process.env.PORT || 8080);
