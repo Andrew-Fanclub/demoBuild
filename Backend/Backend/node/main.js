@@ -5,10 +5,8 @@
 // Needed imports
 var express = require("express");
 var app = express();
-//var render = require('./components/render')
 var http = require('http');
 const path = require('path');
-//const Mailer = require('./components/mailer');
 var bodyParser = require('body-parser');
 
 // Body Parsing
@@ -22,9 +20,7 @@ app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-//app.use(path.join(__dirname, '~/Website/Website/Website/frontend/src'));
-
-app.get("/", function(req, res, err){
+/*app.get("/", function(req, res, err){
     if(err){
         console.error(err);    
     }
@@ -41,7 +37,7 @@ app.get("/aboutus", function(req, res){
 
 app.get("/contact", function(req, res){
     res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/contact'));
-})
+})*/
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
@@ -72,11 +68,11 @@ app.post('/process?contactUs', function(req, res){
 })
 
 // Start listening on port 8080
-app.listen(app.get('PORT'), function(){
+/*app.listen(app.get('PORT'), function(){
     console.log('Server started on port: ' + app.get('PORT'));
-})
+})*/
 
-/*
+
 // Create the server
 const server = http.createServer((req, res) => {
     app.get("/", function(req, res){
@@ -89,12 +85,12 @@ const server = http.createServer((req, res) => {
         res.send("/howitWorks");
     })
     
-    app.get("/whoweAre", function(req, res){
+    app.get("/aboutus", function(req, res){
         console.log("Connected to AFCPlushies who we are");
         res.send("/whoweAre");
     })
     
-    app.get("/contactUs", function(req, res){
+    app.get("/contact", function(req, res){
         console.log("Connected to AFCPlushies contact us");
         res.send("/contactUs");
     })
