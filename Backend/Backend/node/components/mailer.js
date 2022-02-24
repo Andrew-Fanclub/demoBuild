@@ -6,6 +6,11 @@
 
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
+
+// Body Parsing
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded);
+
 /*
 const transport = {
     host: 'afcplushies@gmail.com',
