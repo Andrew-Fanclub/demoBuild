@@ -37,13 +37,13 @@ let transporter = nodemailer.createTransport({
     port: 8080,
     secure: true,
     auth: {
-        user: 'marlonportfolio@gmail.com',
-        pass: '',
+        user: 'afcplushies@gmail.com',
+        pass: 'af2plush!3$',
     }
 })
 
 let mailOptions = {
-    to: 'marlonportfolio@gmail.com',
+    to: 'afcplushies@gmail.com',
     subject: req.body.name + req.body.email,
     text: req.body.message
 }
