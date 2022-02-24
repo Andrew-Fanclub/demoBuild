@@ -14,5 +14,8 @@
     "yarn": "^1.22.17"
   },
     "private": true,
-    "workspaces": ["frontend", "backend", "packages/*"]
+    "workspaces": ["frontend", "backend", "packages/*"],
+    "engines":{
+      "node": "^8.9.4"
+    }
 }
