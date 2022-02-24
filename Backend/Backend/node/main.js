@@ -5,7 +5,7 @@
 // Needed imports
 var express = require("express");
 var app = express();
-var render = require('./components/render')
+//var render = require('./components/render')
 var http = require('http');
 //const Mailer = require('./components/mailer');
 var bodyParser = require('body-parser');
