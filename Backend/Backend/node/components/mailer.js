@@ -52,8 +52,8 @@ let transporter = nodemailer.createTransport({
 
 let mailOptions = {
     to: 'afcplushies@gmail.com',
-    subject: req.body.name + req.body.email,
-    text: req.body.message
+    subject: body.req.name + body.req.email,
+    text: body.req.message
 }
 transporter.sendMail(mailOptions, (error, info) => {
     if(error){
