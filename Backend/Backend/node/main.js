@@ -26,29 +26,29 @@ app.set('PORT', process.env.PORT || 8080);
 
 app.get("/", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'src', 'main'));
+    res.sendFile(path.join(__dirname, '/main'));
 })
 
 app.get("/howitWorks", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'src', './routes/howitWorks'));
+    res.sendFile(path.join(__dirname, './routes/howitWorks'));
 })
 
 app.get("/aboutus", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'src', './routes/whoweAre'));
+    res.sendFile(path.join(__dirname, './routes/whoweAre'));
 })
 
 app.get("/contact", function(req, res){
     console.log();
-    res.sendFile(path.join(__dirname, 'src', './routes/contact'));
+    res.sendFile(path.join(__dirname, './routes/contact'));
 })
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
     let transporter = nodemailer.createTransport({
         host: "gmail",
-        port: 8080,
+        port: 2525,
         secure: true,
         auth: {
             user: 'afcplushies@gmail.com',
