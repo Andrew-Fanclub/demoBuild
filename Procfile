@@ -1,1 +1,1 @@
-web: node ./Backend/Backend/node/main.js
+web: sudo yarn start
