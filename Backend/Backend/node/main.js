@@ -20,9 +20,9 @@ app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-app.get('/', (req, res){
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + 'build/index.html'));    
-})
+});
 
 /*app.get("/", function(req, res, err){
     if(err){
