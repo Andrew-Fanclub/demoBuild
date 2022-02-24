@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-app.use(path.join(__dirname, '~/Website/Website/Website/frontend/src'));
+//app.use(path.join(__dirname, '~/Website/Website/Website/frontend/src'));
 
 app.get("/", function(req, res){
     console.log();
