@@ -14,13 +14,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded);
 
 // Middleware
-app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend/src")));
+app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend/build")));
 
 // Set backend port
 app.set('PORT', process.env.PORT || 8080);
 
 // Render webpages
-app.get("/", function(req, res, err){
+app.get('/', (req, res){
+    res.sendFile(path.join(__dirname + 'build/index.html'));    
+})
+
+/*app.get("/", function(req, res, err){
     if(err){
         console.error(err);    
     }
@@ -37,7 +41,7 @@ app.get("/aboutus", function(req, res){
 
 app.get("/contact", function(req, res){
     res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/contact'));
-})
+})*/
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
