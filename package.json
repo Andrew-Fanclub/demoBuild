@@ -16,6 +16,6 @@
     "private": true,
     "workspaces": ["frontend", "backend", "packages/*"],
     "engines":{
-      "node": "^14.0.0"
+      "node": "^14.19.0"
     }
 }
