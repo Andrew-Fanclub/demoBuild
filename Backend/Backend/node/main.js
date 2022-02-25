@@ -7,8 +7,8 @@ var express = require("express");
 var http = require('http');
 const path = require('path');
 var bodyParser = require('body-parser');
-//var connect = require('connect');
-//var timeout = require('connect-timeout');
+var connect = require('connect');
+var timeout = require('connect-timeout');
 
 var app = express();
 // Body Parsing
