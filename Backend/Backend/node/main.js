@@ -26,7 +26,7 @@ app.get('*', (req, res) => {
 });
 
 // Express timeout
-app.post('/', timeout('5s'), bodyParser.json(), haltOnTimedout, function(req, res, next){
+app.post('/save', timeout('5s'), bodyParser.json(), haltOnTimedout, function(req, res, next){
     savePost(req.body, function(err, id){
         if (err) return next(err)
         if(req.timedout) return
