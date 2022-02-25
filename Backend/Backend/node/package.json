@@ -11,8 +11,6 @@
   "author": "afcplushies",
   "license": "ISC",
   "dependencies": {
-    "connect": "^3.7.0",
-    "connect-timeout": "^1.9.0",
     "express": "^4.17.2",
     "http-proxy-middleware": "^2.0.3",
     "nodemailer": "^6.7.2",
