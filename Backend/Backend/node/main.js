@@ -4,12 +4,12 @@
 
 // Needed imports
 var express = require("express");
-var app = express();
 var http = require('http');
 const path = require('path');
 var bodyParser = require('body-parser');
 var timeout = require('connect-timeout');
 
+var app = express();
 // Body Parsing
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded);
