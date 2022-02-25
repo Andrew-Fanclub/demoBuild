@@ -20,6 +20,11 @@ app.use(express.static(path.join(__dirname + "~/Website/Website/Website/frontend
 // Set backend port
 app.set('PORT', process.env.PORT);
 
+// Render webpages
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '~/Website/Website/Website/frontend/build/index.html'));    
+});
+
 // Express timeout
 app.post('/', timeout('5s'), bodyParser.json(), haltOnTimedout, function(req, res, next){
     savePost(req.body, function(err, id){
@@ -39,12 +44,7 @@ function savePost (post, cb) {
     }, (Math.random() * 7000) >>> 0)
 }
 
-// Render webpages
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '~/Website/Website/Website/frontend/build/index.html'));    
-});
-
-app.get("/", function(req, res, err){
+/*app.get("/", function(req, res, err){
     if(err){
         console.error(err);    
     }
@@ -61,7 +61,7 @@ app.get("/aboutus", function(req, res){
 
 app.get("/contact", function(req, res){
     res.render(path.join(__dirname, '~/Website/Website/Website/frontend/src/routes/contact'));
-})
+})*/
 
 // Mailer section for contact page
 app.post('/process?contactUs', function(req, res){
