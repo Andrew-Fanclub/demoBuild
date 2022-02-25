@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test",
-    "start": "yarn start ./Backend/Backend/node/"
+    "start": "node ./Backend/Backend/node/main.js"
   },
   "author": "afcplush",
   "license": "ISC",
