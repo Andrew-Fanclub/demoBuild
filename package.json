@@ -11,9 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "react-scripts": "^5.0.0",
-    "yarn": "^1.22.17",
-    "connect-timout": "^1.9.0",
-    "@types/connect-timeout": "^0.0.36"
+    "yarn": "^1.22.17"
   },
     "private": true,
     "workspaces": ["frontend", "backend", "packages/*"],
